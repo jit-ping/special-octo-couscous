@@ -1,0 +1,11 @@
+jupyter
+ipykernel
+numpy
+pandas
+matplotlib
+folium
+geopandas
+shapely
+fiona
+pyproj
+rtree
