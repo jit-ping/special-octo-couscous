@@ -129,3 +129,16 @@ def get_interactive_map_and_mrt_geojson(
 
     # 4. Return the string AND the map object
     return result_string, m
+# --- Function 3: Convert DMS to Lat Long ---
+
+def dms_to_dd(degrees, minutes, seconds, direction):
+    """Converts Degrees, Minutes, Seconds (DMS) to Decimal Degrees (DD)."""
+    
+    # 1. Apply the core formula
+    decimal_degrees = float(degrees) + float(minutes) / 60 + float(seconds) / 3600
+    
+    # 2. Apply the sign based on direction
+    if direction in ('S', 'W', 's', 'w'):
+        decimal_degrees = -decimal_degrees
+        
+    return decimal_degrees
